@@ -1,0 +1,19 @@
+## yarn ##
+.yarn/*
+yarn.lock
+yarn-*.log
+
+
+## npm ##
+package-lock.json
+npm-*.log
+
+## node ##
+node_modules/
+
+## build ##
+dist/*
+build/*
+
+## parcel ##
+.cache/*

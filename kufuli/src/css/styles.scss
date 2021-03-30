@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import "_variables";
+@import "_utils.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  color: $secondary;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+
+  .wrapped-start,
+  .wrapped-end {
+    flex: 1;
+    width: 100%;
+    padding: remify(16px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapped-start {
+    background-color: rgba($color: $primary, $alpha: 0.35);
+  }
+}
+
+.contained {
+  width: 80%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.splitter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  span:not(:nth-of-type(2)) {
+    display: block;
+    border-top: solid 1px rgba($color: $gray, $alpha: 0.25);
+    flex: 1;
+  }
+
+  span {
+    color: rgba($color: $gray, $alpha: 0.5);
+  }
+}
+
+.wrapped-start {
+  .logo {
+    h3 {
+      font-size: 1.8rem;
+      color: $secondary;
+      letter-spacing: 0.5px;
+      padding: 0.15rem 0.5rem;
+      border: solid 2px $secondary;
+      display: inline;
+    }
+  }
+
+  .contained-container {
+    width: 100%;
+    height: 100%;
+    // border: solid 1px green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contained {
+    overflow-y: hidden;
+    // border: solid 1px purple;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $white;
+      text-align: center;
+      font-weight: 800;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.wrapped-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .cornered-top,
+  .cornered-bottom {
+    // background-color: rgba($color: $primary, $alpha: 0.35);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    // box-shadow: $shadow-sm;
+    overflow: hidden;
+    display: none;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .cornered-top {
+    top: -60px;
+    right: -60px;
+  }
+
+  .cornered-bottom {
+    bottom: -60px;
+    left: -60px;
+  }
+
+  .contained {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      color: rgba($color: $gray, $alpha: 0.75);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    a {
+      color: $primary;
+    }
+  }
+
+  .social-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    button {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+      border: solid 1px transparent;
+      padding: 0.75rem;
+      border-radius: 10px;
+      width: 100%;
+      font-weight: 600;
+
+      &.google {
+        border-color: $tertiary;
+        background-color: $white;
+      }
+
+      &.facebook {
+        background-color: #4267b2;
+        color: $white;
+      }
+
+      span:first-of-type {
+        height: 20px;
+        width: 20px;
+        display: block;
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          height: 100%;
+          width: 100%;
+        }
+
+        svg {
+          height: 100%;
+          width: 100%;
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .form-division {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: 0.8rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 0.75rem 1rem;
+      padding-left: 2rem;
+      font-size: 0.8rem;
+      flex: 1;
+      border: none;
+      border: solid 1px $tertiary;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &::placeholder {
+        color: rgba($color: $gray, $alpha: 0.75);
+      }
+
+      &:focus {
+        border-color: rgba($color: $primary, $alpha: 0.75);
+        box-shadow: $shadow-md;
+      }
+    }
+
+    .form-division-inside {
+      flex: 1;
+      // border: solid 1px purple;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      span {
+        height: 15px;
+        width: 15px;
+        overflow: hidden;
+        // border: solid 1px;
+        position: absolute;
+        // top: 0;
+        padding: 0.75rem;
+        padding-top: 0.5rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .form-division-checked {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    button {
+      padding: 0.7rem;
+      border: solid 1px transparent;
+      background-color: $primary;
+      color: $white;
+      border-radius: 10px;
+      margin-top: 1rem;
+      font-weight: 600;
+      box-shadow: $shadow-lg;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (min-width: $br-lg) {
+  .contained {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: $br-sm) {
+  .contained {
+    width: 100%;
+    // padding: 1rem;
+  }
+
+  #wrapper {
+    .wrapped-start {
+      display: none;
+    }
+
+    .wrapped-end {
+      padding: remify(20px);
+    }
+  }
+
+  .wrapped-end {
+    .contained {
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    .social-buttons {
+      button {
+        font-size: 0.6rem;
+        text-align: left;
+      }
+
+      span:first-of-type {
+        height: 12px;
+        width: 12px;
+      }
+    }
+
+    .cornered-top {
+      top: -90px;
+      right: -90px;
+    }
+
+    .cornered-bottom {
+      bottom: -90px;
+      left: -90px;
+    }
+  }
+}
