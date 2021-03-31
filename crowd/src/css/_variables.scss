@@ -1,0 +1,21 @@
+// Colors
+$primary: #ffc759;
+$secondary: #384d48;
+$tertiary: #dce1de;
+$white: #ffffff;
+$black: #000000;
+$gray: #808080;
+
+// Shadows - Borrowed from Tailwind CSS
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Breakpoints
+$br-sm: 640px;
+$br-md: 768px;
+$br-lg: 1024px;
+$br-xl: 1280px;

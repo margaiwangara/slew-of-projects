@@ -7,10 +7,11 @@
   "author": "Margai Wangara",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/*.html",
+    "dev": "parcel src/*.html -p 5678",
     "build": "parcel build src/*.html"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.8"
   }
 }
